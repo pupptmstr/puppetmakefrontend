@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+  font-family: "Calibri";
+  font-style: normal;
+  font-size: 18px;
+  background-image: url("background.jpg");
+  background-size: cover;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: solid 1px #930C96;
+  border-color: transparent;
+  transition: 0.3s;
+}
+
+a:hover {
+  border-color: #930C96;
+  transition: 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.3%;
+  color: white;
+  background: rgba(230, 230, 230, 0.05);
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-top: 1.4%;
+  margin-bottom: 1%;
+  line-height: 40px;
+  width: 40%;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size:larger;
+  border-left: solid 2px white;
+  border-right: solid 2px white;
+  text-align: center;
+}
+
+.header-logo {
+  margin-left: 2%;
+  margin-right: 8%;
+  height: 90%;
+}
+
+.searchBlock {
+  width: 30%;
+  height: 20%;
+  margin: 2% 5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  border: solid 1px grey;
+  border-radius: 100px;
+  background-color: transparent;
+  color : white;
+  display: flex;
+  padding-left: 1%;
+}
+
+.search {
+  color: white;
+  line-height: 23px;
+  background-color: rgba(0,0,0,0);
+  border: 0px;
+  outline: none;
+  font-size: 20px;
+  width: 90%;
+}
+
+.magnifier {
+  margin-top: 1.5%;
+  margin-right: 2%;
+}
+
+.company-description {
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  font-size: 35px;
+}
