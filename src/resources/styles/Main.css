@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.simple-flex {
+  display: flex;
+  align-items: center;
+}
+
+.landing-page-block {
+  margin: 0 auto;
+  width: 80%;
+  min-width: 1200px;
+  padding: 22px 0 99px 0;
+}
+
+.landing-page-block .simple-flex {
+  position: relative;
+  padding: 0 40px;
+}
+
+.landing-page-block h1 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: uppercase;
+  padding: 0 80px 13px 0;
+  border-bottom: 1px solid #7F06AA;
+  text-align: left;
+  width: fit-content;
+  margin-bottom: 65px;
+}
+
+.card {
+  width: 340px;
+  min-width: 340px;;
+  border-radius: 20px;
+  box-shadow: 0 1px 50px rgba(255, 29, 232, 0.25);
+  -webkit-box-shadow: 0 1px 50px rgba(255, 29, 232, 0.25);
+  -moz-box-shadow: 0 1px 50px rgba(255, 29, 232, 0.25);
+  margin: 0 18px;
+}
+
+.next-btn, .prev-btn {
+  border: none;
+  border-bottom: 6px solid #7C3693;
+  border-right: 6px solid #7C3693;
+  border-radius: 4px;
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  background-color: transparent;
+  min-height: 35px;
+  cursor: pointer;
+  top: 50%;
+  position: absolute;
+  transform: translateY(50%);
+}
+
+.prev-btn:hover, .next-btn:hover {
+  border-color: #833393;
+  box-shadow: 10px 10px 20px rgba(255, 29, 232, 0.25);
+  -webkit-box-shadow: 10px 10px 20px rgba(255, 29, 232, 0.25);
+  -moz-box-shadow: 10px 10px 20px rgba(255, 29, 232, 0.25);
+}
+
+.next-btn {
+  transform: rotate(-45deg);
+  right: 0;
+}
+
+.prev-btn {
+  transform: rotate(135deg);
+  left: 0;
+}
+
+.view-all-btn {
+  width: 370px;
+  background-color: transparent;
+  height: 84px;
+  border: 1px solid #7C3693;
+  border-radius: 100px;
+  margin-top: 81px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.view-all-btn:hover {
+  filter: drop-shadow(0 2px 10px #B11BA2);
+}
