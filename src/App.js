@@ -26,13 +26,13 @@ function App() {
 
         <MainTeam />
 
-        <div className='projects'>
-          <MainProjects />
-        </div>
+        {/*<div className='projects'>*/}
+        {/*  <MainProjects />*/}
+        {/*</div>*/}
 
-        <div className='help'>
-          <MainHelp />
-        </div>
+        {/*<div className='help'>*/}
+        {/*  <MainHelp />*/}
+        {/*</div>*/}
 
 
       </main>
