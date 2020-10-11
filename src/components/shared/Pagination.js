@@ -6,7 +6,7 @@ import axios from 'axios';
 function Pagination(props) {
   const { viewAllText, url, title, card, initialData } = props;
 
-  const [data, setData] = useState(initialData);
+  const [data, setData] = useState([]);
   const [page, setPage] = useState(0);
 
 
@@ -54,7 +54,7 @@ Pagination.propTypes = {
   viewAllText: PropTypes.string,
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  card: PropTypes.func.isRequired
+  card: PropTypes.func.isRequired,
 };
 
 export default Pagination;
