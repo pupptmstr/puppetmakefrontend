@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 function Pagination(props) {
-  const { viewAllText, url, title, card, initialData } = props;
+  const { viewAllText, url, title, card } = props;
 
   const [data, setData] = useState([]);
   const [page, setPage] = useState(0);
