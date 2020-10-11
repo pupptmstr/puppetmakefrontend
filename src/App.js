@@ -26,20 +26,12 @@ function App() {
 
         <MainTeam />
 
-        {/*<div className='projects'>*/}
-        {/*  <MainProjects />*/}
-        {/*</div>*/}
-
-        {/*<div className='help'>*/}
-        {/*  <MainHelp />*/}
-        {/*</div>*/}
-
 
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+      {/*<footer>*/}
+      {/*  <Footer />*/}
+      {/*</footer>*/}
     </div>
   );
 }

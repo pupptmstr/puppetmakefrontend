@@ -10,7 +10,7 @@ function Header() {
 
 
             <ul>
-                <li><a href="/blog">Блог</a></li>
+                <li><a href="/#blog">Блог</a></li>
                 <li><a href="/#team">Наша команда</a></li>
                 <li><a href="/#projects">Проекты</a></li>
                 <li><a href="/#support">Помощь</a></li>

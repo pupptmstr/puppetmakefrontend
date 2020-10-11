@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
@@ -9,8 +9,19 @@ function Pagination(props) {
   const [data, setData] = useState(initialData);
   const [page, setPage] = useState(0);
 
-  // Uncomment this when running on a host machine
-  // axios.get(`http://localhost:8080/${url}`).then(response => setData(response.data));
+
+  useEffect(() => {
+      const fetchData = async () => {
+          const response = await axios.get(`http://localhost:8080/${url}`);
+          onGetDataSuccess(response);
+      };
+      fetchData();
+  }, [url]);
+
+  function onGetDataSuccess({data: { _embedded } }) {
+      const dataName = Object.keys(_embedded)[0];
+      setData(_embedded[dataName]);
+  }
 
   return (
     <div className='landing-page-block'>
@@ -43,8 +54,7 @@ Pagination.propTypes = {
   viewAllText: PropTypes.string,
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  card: PropTypes.func.isRequired,
-  initialData: PropTypes.array // This should not be needed when there's a server up
+  card: PropTypes.func.isRequired
 };
 
 export default Pagination;
