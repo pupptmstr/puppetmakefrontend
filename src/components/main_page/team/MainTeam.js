@@ -7,7 +7,7 @@ const MainTeam = () =>
   <Pagination
     card={(piece, idx) => <TeamCard key={idx} {...piece} />}
     title='Наша команда'
-    url='teammateses'
+    url='teammates'
   />;
 
 export default MainTeam;

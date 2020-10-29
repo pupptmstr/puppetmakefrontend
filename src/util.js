@@ -5,3 +5,7 @@ export function cutString(str, len = 50) {
 
   return str.substr(0, len - 2) + '...';
 }
+
+export function getDate(year, month, day) {
+  return `${day}.${month}.${year}`
+}

@@ -1,39 +1,20 @@
 import React from 'react';
 import './resources/styles/App.css';
 import './resources/styles/Main.css';
-import Header from './components/shared/Header';
-import Footer from './components/shared/Footer';
-import MainCompanyInfo from './components/main_page/MainCompanyInfo';
-import MainBlog from './components/main_page/blog/MainBlog';
-import MainTeam from './components/main_page/team/MainTeam';
-import MainProjects from './components/main_page/MainProjects';
-import MainHelp from './components/main_page/MainHelp';
+import MainPage from "./components/main_page/MainPage";
+import OneNewsPage from "./components/blog/OneNewsPage";
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 
 function App() {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <Header />
-      </header>
-
-      <main>
-        <div className={'company-info'}>
-          <MainCompanyInfo />
-        </div>
-
-        <MainBlog />
-
-        <MainTeam />
-
-
-      </main>
-
-      {/*<footer>*/}
-      {/*  <Footer />*/}
-      {/*</footer>*/}
-    </div>
-  );
+    return (
+        <BrowserRouter>
+                <Switch>
+                    <Route path="/news/one/:id" component={OneNewsPage} />
+                    <Route path="/" component={MainPage} />
+                </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;

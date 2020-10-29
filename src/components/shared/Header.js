@@ -8,9 +8,8 @@ function Header() {
 
             <img src={logo} className='header-logo' alt='logo' width={240} height={103}/>
 
-
             <ul>
-                <li><a href="/#blog">Блог</a></li>
+                <li><a href="/news/one">Блог</a></li>
                 <li><a href="/#team">Наша команда</a></li>
                 <li><a href="/#projects">Проекты</a></li>
                 <li><a href="/#support">Помощь</a></li>
