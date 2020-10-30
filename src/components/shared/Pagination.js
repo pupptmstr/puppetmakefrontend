@@ -44,13 +44,13 @@ function Pagination(props) {
                     }
                 />
             </div>
-            {viewAllText ? <button className='view-all-btn'>{viewAllText}</button> : null}
+            {/*{viewAllText ? <button className='view-all-btn'>{viewAllText}</button> : null}*/}
         </div>
     )
 }
 
 Pagination.propTypes = {
-    viewAllText: PropTypes.string,
+    // viewAllText: PropTypes.string,
     url: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     card: PropTypes.func.isRequired,
