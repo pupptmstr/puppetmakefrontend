@@ -4,33 +4,33 @@ import Footer from "../shared/Footer";
 import BigBlogCard from "./BigBlogCard";
 import axios from "axios";
 import {object} from "prop-types";
+import {withRouter} from "react-router-dom";
 
-function OneNewsPage() {
-    const [data, setData] = useState(object);
+function OneNewsPage(props) {
+    const [data, setData] = useState({});
     const [page, setPage] = useState(0);
-    const url = props.location.path;
+    const newsId = props.match.params.id;
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`http://localhost:8080/api/v1/${url}`);
+            const response = await axios.get(`http://localhost:8080/api/v1/news/one`, {params: {id: newsId}});
             onGetDataSuccess(response);
         };
         fetchData();
-    }, [url]);
+    }, [newsId]);
 
     function onGetDataSuccess({ data: { array_data } }) {
         setData(array_data[0]);
+        console.log(array_data[0])
     }
 
     return(
-        <div className='App-additions'>
+        <div className='App'>
             <header className='App-header'>
                 <Header />
             </header>
 
             <main>
-                <BigBlogCard
-                />
             </main>
 
             <footer>
@@ -41,4 +41,4 @@ function OneNewsPage() {
 }
 
 
-export default OneNewsPage;
+export default withRouter(OneNewsPage);

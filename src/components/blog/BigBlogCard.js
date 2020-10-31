@@ -1,5 +1,6 @@
 import React from "react";
 import {cutString, getDate} from "../../util";
+import PropTypes from "prop-types";
 
 function BigBlogCard(props) {
 
@@ -22,5 +23,13 @@ function BigBlogCard(props) {
         </div>
     );
 }
+
+
+BigBlogCard.propTypes = {
+    create_at: PropTypes.object.isRequired,
+    header: PropTypes.string.isRequired,
+    main_image_link: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired
+};
 
 export default BigBlogCard;
