@@ -6,8 +6,9 @@ import axios from "axios";
 import {withRouter} from "react-router-dom";
 
 function OneNewsPage(props) {
-    const [data, setData] = useState({});
+    const [data, setData] = useState(null);
     const newsId = props.match.params.id;
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,7 +20,6 @@ function OneNewsPage(props) {
 
     function onGetDataSuccess({ data: { array_data } }) {
         setData(array_data[0]);
-        console.log(data)
     }
 
     return(
@@ -30,11 +30,11 @@ function OneNewsPage(props) {
 
             <main>
                 <div className={'news-card'}>
-                    <BigBlogCard {...data}/>
-                    {/*create_at={data.create_at}*/}
-                    {/*header={data.header}*/}
-                    {/*main_image_link={data.main_image_link}*/}
-                    {/*content={data.content}/>*/}
+                    {
+                        data
+                        ? <BigBlogCard {...data}/>
+                        : null
+                    }
                 </div>
             </main>
 

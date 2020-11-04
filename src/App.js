@@ -10,7 +10,7 @@ function App() {
     return (
         <Router>
                 <Switch>
-                    <Route path="/news/one/:id" component={OneNewsPage} />
+                    <Route path="/news/one/:id" render={props => <OneNewsPage {...props}/>}/>
                     <Route path="/" component={MainPage} />
                 </Switch>
         </Router>
