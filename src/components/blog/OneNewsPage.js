@@ -3,12 +3,10 @@ import Header from "../shared/Header";
 import Footer from "../shared/Footer";
 import BigBlogCard from "./BigBlogCard";
 import axios from "axios";
-import {object} from "prop-types";
 import {withRouter} from "react-router-dom";
 
 function OneNewsPage(props) {
     const [data, setData] = useState({});
-    const [page, setPage] = useState(0);
     const newsId = props.match.params.id;
 
     useEffect(() => {
@@ -21,7 +19,7 @@ function OneNewsPage(props) {
 
     function onGetDataSuccess({ data: { array_data } }) {
         setData(array_data[0]);
-        console.log(array_data[0])
+        console.log(data)
     }
 
     return(
@@ -31,6 +29,13 @@ function OneNewsPage(props) {
             </header>
 
             <main>
+                <div className={'news-card'}>
+                    <BigBlogCard {...data}/>
+                    {/*create_at={data.create_at}*/}
+                    {/*header={data.header}*/}
+                    {/*main_image_link={data.main_image_link}*/}
+                    {/*content={data.content}/>*/}
+                </div>
             </main>
 
             <footer>

@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 function BigBlogCard(props) {
 
     const {content, create_at, header, main_image_link} = props;
+    console.log(props);
 
     return(
         <div className='card blog card'>

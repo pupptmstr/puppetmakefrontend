@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
     return (
         <div>
-            <h1>Footer типо</h1>
+            <h1>Footer типа</h1>
         </div>
     )
 }
