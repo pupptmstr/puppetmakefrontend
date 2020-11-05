@@ -105,3 +105,9 @@ code {
 .view-all-btn:hover {
   filter: drop-shadow(0 2px 10px #B11BA2);
 }
+
+.news-card {
+  height: fit-content;
+  width: fit-content;
+}
+

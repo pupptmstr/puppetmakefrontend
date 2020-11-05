@@ -6,6 +6,25 @@
   background-image: url("../img/background.jpg");
   background-size: cover;
   color: white;
+  padding-bottom: 5vh;
+}
+
+.App-page {
+  text-align: center;
+  font-family: "Calibri", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  background-image: url("../img/background-page.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.shadowed-name {
+  color: grey;
+  opacity: 0.6;
+  text-align: left;
+  margin-top: 2vh;
+  margin-left: 5vw;
 }
 
 a {

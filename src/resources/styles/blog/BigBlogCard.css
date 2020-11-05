@@ -1,0 +1,72 @@
+.big-blog-card {
+    min-height: 70vh;
+    width: 48vw;
+    margin: 5vh 25vw;
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.headerImg {
+    height: 30vh;
+    width: 48vw;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.big-blog-card img {
+    max-height: 30vh;
+    max-width: 58vw;
+}
+
+.big-blog-date {
+    float: left;
+    margin-right: 1vw;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+
+.big-blog-card-body {
+    text-align: center;
+}
+
+.big-blog-content {
+    padding-left: 2vw;
+    padding-top: 1vw;
+    min-height: 17vw;
+    text-align: left;
+}
+
+.big-blog-dark-header {
+    padding-left: 1vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #0A040F;
+    background-color: #0A040F;
+    width: 24vw;
+    color: white;
+    position: absolute;
+    top: 32vh;
+}
+
+.big-blog-card-body button {
+    margin-top: 2vh;
+    width: 170px;
+    height: 48px;
+    border: 1px solid #7C3693;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: #0A040F;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.big-blog-card-body button:hover {
+    filter: drop-shadow(0px 2px 10px #B11BA2);
+}

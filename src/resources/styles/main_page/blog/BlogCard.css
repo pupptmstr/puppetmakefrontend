@@ -39,9 +39,10 @@
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
-  background-color: transparent;
+  background-color: #0A040F;
   font-size: 14px;
   font-weight: 300;
+  color: white;
 }
 
 .blog-card-body div {
