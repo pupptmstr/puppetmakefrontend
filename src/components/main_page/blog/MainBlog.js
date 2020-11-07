@@ -5,6 +5,7 @@ import Pagination from '../../shared/Pagination';
 
 const MainBlog = () =>
   <Pagination
+      id='news'
     title='Блог'
     url='news'
     card={(piece, idx) => <BlogCard key={idx} {...piece} />}

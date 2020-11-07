@@ -10,9 +10,9 @@ function Footer() {
         <div>
             <Header/>
             <div className={'footer-content'}>
-                <a href={'https://vk.com/pupptmstr'}> <img src={vk} alt={'VK'}/> </a>
-                <a href={'https://instagram.com/pupptmstr/'}> <img src={insta} alt={'Instagram'}/> </a>
-                <a href={'https://wa.me/79967875622'}> <img src={whatsapp} alt={'WhatsApp'}/> </a>
+                <a href={'https://vk.com/pupptmstr'} target="_blank"> <img src={vk} alt={'VK'}/> </a>
+                <a href={'https://instagram.com/pupptmstr/'} target="_blank"> <img src={insta} alt={'Instagram'}/> </a>
+                <a href={'https://wa.me/79967875622'} target="_blank"> <img src={whatsapp} alt={'WhatsApp'}/> </a>
                 <span className={'footer-text'}> © 2020 PuppetMake studio. Все права защищены</span>
             </div>
         </div>

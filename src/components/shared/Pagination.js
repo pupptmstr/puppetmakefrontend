@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 function Pagination(props) {
-    const {viewAllText, url, title, card} = props;
+    const {id, viewAllText, url, title, card} = props;
 
     const [data, setData] = useState([]);
     const [page, setPage] = useState(0);
@@ -24,7 +24,7 @@ function Pagination(props) {
 
     return (
         <div className='landing-page-block'>
-            <h1>{title}</h1>
+            <h1 id={id}>{title}</h1>
             <div
                 className='simple-flex'
                 style={{justifyContent: data.slice(page * 3, 3 * (page + 1)).length === 3 ? 'space-between' : 'start'}}

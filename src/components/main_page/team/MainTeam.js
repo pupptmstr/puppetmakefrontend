@@ -5,6 +5,7 @@ import TeamCard from './TeamCard';
 
 const MainTeam = () =>
   <Pagination
+      id='team'
     card={(piece, idx) => <TeamCard key={idx} {...piece} />}
     title='Наша команда'
     url='teammates'
