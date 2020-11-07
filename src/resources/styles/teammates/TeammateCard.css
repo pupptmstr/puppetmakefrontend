@@ -1,0 +1,127 @@
+
+
+.big-teammate-card {
+    height: 80vh;
+    width: 45vw;
+}
+
+.big-teammate-card-body {
+    height: 60vh;
+    position: relative;
+    top: 15vh;
+    padding-left: 22vw;
+    padding-top: 3vh;
+    border-radius: 20px;
+    border: 2px solid #930C96;
+    width: 45vw;
+    text-align: left;
+    margin-left: 25vw;
+}
+
+.inline-teammate-info {
+    height: 30vh;
+}
+
+.big-avatar {
+    z-index: 1;
+    width: 20vw;
+    border-radius: 20px;
+    left: 26vw;
+    float: left;
+    position: relative;
+}
+
+.full-name {
+    height: 5vh;
+}
+
+.role {
+    height: 4vh;
+    margin-top: 1vh;
+}
+
+.years-in-company {
+    height: 4vh;
+    margin-top: 1vh;
+    border-left: 2px solid #930C96;
+    padding-left: 5px;
+}
+
+.curr-role {
+    margin-top: 1vh;
+    height: 4vh;
+    padding-left: 5px;
+    border-left: 2px solid #930C96;
+}
+
+.description {
+    margin-top: 1vh;
+    border-left: 2px solid #930C96;
+    padding-left: 5px;
+}
+
+.contact-info {
+    margin-top: 1vh;
+    padding-left: 5px;
+    border-left: 2px solid #930C96;
+}
+
+.back-btn {
+    margin-top: 4vh;
+    width: 170px;
+    height: 48px;
+    border: 1px solid #7C3693;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+
+.back-btn:hover {
+    filter: drop-shadow(0px 2px 10px #B11BA2);
+}
+
+.next-btn-photos, .prev-btn-photos {
+    border: none;
+    border-bottom: 6px solid #7C3693;
+    border-right: 6px solid #7C3693;
+    border-radius: 4px;
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    background-color: transparent;
+    min-height: 35px;
+    cursor: pointer;
+    top: 80%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    position: absolute;
+    transform: translateY(50%);
+}
+
+.prev-btn-photos:hover, .next-btn-photos:hover {
+    border-color: #833393;
+    box-shadow: 10px 10px 20px rgba(255, 29, 232, 0.25);
+    -webkit-box-shadow: 10px 10px 20px rgba(255, 29, 232, 0.25);
+    -moz-box-shadow: 10px 10px 20px rgba(255, 29, 232, 0.25);
+}
+
+.next-btn-photos {
+    transform: rotate(-45deg);
+    right: 0;
+}
+
+.prev-btn-photos {
+    transform: rotate(135deg);
+    left: 0;
+}
+
+.one-photo {
+    height: 9vh;
+    margin-top: 3vh;
+    margin-left: -16vw;
+    margin-right: 5vw;
+}

@@ -1,12 +1,13 @@
-import React from "react";
-import {cutString, getDate} from "../../util";
+import React, {useState} from "react";
 import '../../resources/styles/teammates/TeammateCard.css'
 import PropTypes from "prop-types";
 import {withRouter} from "react-router-dom";
 
 function TeammateCard(props) {
     const date = new Date();
-    const {first_name,
+    const [page, setPage] = useState(0);
+    const {
+        first_name,
         surname,
         nickname,
         hired_at,
@@ -15,27 +16,57 @@ function TeammateCard(props) {
         main_photo_link,
         description,
         social_links,
-        photos} = props;
+        photos
+    } = props;
     console.log(props);
+
 
     return (
         <div className='big-teammate-card'>
-            <img className='avatar' src={main_photo_link} alt='avatar'/>
+            <img className='big-avatar' src={main_photo_link} alt='avatar'/>
             <div className='big-teammate-card-body'>
-                <div className='full-name'>
-                    <h2>{`${first_name} "${nickname}" ${surname}`}</h2>
-                </div>
-                <div className='role'>{`${global_role}`}</div>
-                <div className={'years-in-company'}>
-                    {`Сколько лет в компании: ${date.getFullYear() - hired_at.Year + 1}`}
-                </div>
-                <div className={'curr-role'}> {`Нынешняя роль в компании: ${current_role}`}</div>
-                <div className={'description'}>
-                    {`Краткая информация: ${description}`}
+                <div className='inline-teammate-info'>
+                    <div className='full-name'>
+                        <h2>{`${first_name} "${nickname}" ${surname}`}</h2>
+                    </div>
+                    <div className='role'>{`${global_role}`}</div>
+                    <div className={'years-in-company'}>
+                        {`Сколько лет в компании: ${date.getFullYear() - hired_at.Year + 1}`}
+                    </div>
+                    <div className={'curr-role'}> {`Нынешняя роль в компании: ${current_role}`}</div>
+                    <div className={'description'}>
+                        {`Краткая информация: ${description}`}
+                    </div>
+                    <div className={'contact-info'}> Контакты для связи: |
+                        {
+                            social_links.map(link =>
+                                <a href={'https://' + link}> {link} |</a>
+                            )
+                        }
+                    </div>
                 </div>
 
-                <button onClick={() => props.history.push(`/`)}>Назад</button>
+                <button className={'back-btn'} onClick={() => props.history.push(`/`)}>Назад</button>
 
+                <div className='simple-flex'
+                     style={{justifyContent: photos.slice(page * 3, 3 * (page + 1)).length === 3 ? 'space-between' : 'start'}}
+                >
+                    <button
+                        className='prev-btn-photos'
+                        onClick={() => setPage(Math.max(page - 1, 0))}
+                    />
+                    {photos.slice(page * 3, 3 * (page + 1)).map(photo => <img className={'one-photo'} src={`${photo}`}
+                                                                              alt={`${photo}`}/>)}
+                    <button
+                        className='next-btn-photos'
+                        onClick={() =>
+                            setPage(Math.min(
+                                page + 1, photos
+                                    ? Math.ceil(photos.length / 3) - 1 : null)
+                            )
+                        }
+                    />
+                </div>
             </div>
         </div>
     );
