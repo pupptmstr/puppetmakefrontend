@@ -40,13 +40,11 @@ function TeammateCard(props) {
                     <div className={'contact-info'}> Контакты для связи: |
                         {
                             social_links.map(link =>
-                                <a href={'https://' + link}> {link} |</a>
+                                <a href={'https://' + link} target="_blank"> {link} |</a>
                             )
                         }
                     </div>
                 </div>
-
-                <button className={'back-btn'} onClick={() => props.history.push(`/`)}>Назад</button>
 
                 <div className='simple-flex'
                      style={{justifyContent: photos.slice(page * 3, 3 * (page + 1)).length === 3 ? 'space-between' : 'start'}}
@@ -67,6 +65,8 @@ function TeammateCard(props) {
                         }
                     />
                 </div>
+
+                <button className={'back-btn'} onClick={() => props.history.push(`/`)}>Назад</button>
             </div>
         </div>
     );
