@@ -17,7 +17,7 @@ function Header() {
 
             <div className="searchBlock">
                 <img src={magnifier} alt='search' width={17} height={17} className="magnifier"/>
-                <input type='search' className='search' placeholder="Найти меня..."/>
+                <input type='search' className='search' placeholder="Поиск..."/>
             </div>
 
         </div>
