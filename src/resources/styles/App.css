@@ -41,6 +41,17 @@ a:hover {
     transition: 0.3s;
 }
 
+.logo-home-link {
+    margin-left: 2%;
+    margin-right: 8%;
+    height: 90%;
+    border-color: transparent;
+}
+
+.logo-home-link:hover {
+    border-color: transparent;
+}
+
 .header {
     display: flex;
     justify-content: space-around;

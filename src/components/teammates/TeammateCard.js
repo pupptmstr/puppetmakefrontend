@@ -47,7 +47,7 @@ function TeammateCard(props) {
                 </div>
 
                 <div className='simple-flex'
-                     style={{justifyContent: photos.slice(page * 3, 3 * (page + 1)).length === 3 ? 'space-between' : 'start'}}
+                     style={{justifyContent: (photos ? photos.slice(page * 3, 3 * (page + 1)).length : 0    ) === 3 ? 'space-between' : 'start'}}
                 >
                     <button
                         className='prev-btn-photos'
