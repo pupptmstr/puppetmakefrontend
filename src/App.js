@@ -5,6 +5,7 @@ import MainPage from "./components/main_page/MainPage";
 import OneNewsPage from "./components/blog/OneNewsPage";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import OneTeammatePage from "./components/teammates/OneTeammatePage";
+import OneProjectPage from "./components/projects/OneProjectPage";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
                 <Switch>
                     <Route path="/news/one/:id" component={OneNewsPage} />
                     <Route path="/teammates/one/:id" component={OneTeammatePage} />
+                    <Route path="/projects/one/:id" component={OneProjectPage} />
                     <Route path="/" component={MainPage} />
                 </Switch>
         </Router>

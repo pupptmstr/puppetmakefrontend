@@ -1,0 +1,79 @@
+.big-project-logo {
+    width: 20vw;
+    height: 60vh;
+    border-radius: 20px;
+    float: left;
+    margin-top: 10vh;
+    margin-left: -2vw;
+}
+
+.big-project-card {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    width: 88vw;
+    height: 90vh;
+}
+
+.big-project-name {
+    font-size: 200%;
+    text-transform: uppercase;
+    float: left;
+    width: 2vw;
+    height: fit-content;
+    padding-left: 1vw;
+    border-left: 3px solid #7C3693;
+}
+
+.big-project-filler {
+    border-bottom: 3px solid #7C3693;
+    width: 10vw;
+    font-size: 160%;
+    margin-left: 30vw;
+    margin-top: 10vh;
+}
+
+.big-project-main-info {
+    width: 60vw;
+    margin-top: 10vh;
+    text-align: left;
+    font-size: 140%;
+}
+
+.big-project-genres {
+    padding-top: 10vh;
+    padding-left: 23vw;
+}
+
+.big-project-description {
+    margin-top: 2vh;
+    padding-left: 3vw;
+    font-weight: 200;
+}
+
+.big-project-tech-specs {
+    margin-top: 2vh;
+    padding-left: 3vw;
+    height: 11vh;
+    scrollbar-track-color: #7C3693;
+    scrollbar-arrow-color: transparent;
+    scrollbar-base-color: #7C3693;
+}
+
+.big-project-status {
+    margin-top: 2vh;
+    padding-left: 23vw;
+}
+
+.big-project-language {
+    margin-top: 2vh;
+    padding-left: 23vw;
+}
+
+.developer {
+    margin-top: 2vh;
+    padding-left: 23vw;
+}
+
+.big-project-card .back-btn {
+    margin-left: -35vw;
+}

@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 function Pagination(props) {
-    const {id, viewAllText, url, title, card} = props;
+    const {viewAllText, url, card} = props;
 
     const [data, setData] = useState([]);
     const [page, setPage] = useState(0);
@@ -23,8 +23,9 @@ function Pagination(props) {
     }
 
     return (
-        <div className='landing-page-block'>
-            <h1 id={id}>{title}</h1>
+        <div className='landing-page-block inline'>
+
+
             <div
                 className='simple-flex'
                 style={{justifyContent: data.slice(page * 3, 3 * (page + 1)).length === 3 ? 'space-between' : 'start'}}
@@ -51,8 +52,8 @@ function Pagination(props) {
 
 Pagination.propTypes = {
     // viewAllText: PropTypes.string,
+    done: PropTypes.bool,
     url: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
     card: PropTypes.func.isRequired,
 };
 

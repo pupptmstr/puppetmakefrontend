@@ -9,10 +9,10 @@ function Header() {
             <a className={'logo-home-link'} href={"/"}><img src={logo} className='header-logo' alt='logo' width={240} height={103}/></a>
 
             <ul>
-                <li><a href="/#news">Блог</a></li>
-                <li><a href="/#team">Наша команда</a></li>
-                <li><a href="/#projects" style={{color:'#808080', opacity:0.6}}>Проекты</a></li>
-                <li><a href="/#support" style={{color:'#808080', opacity:0.6}}>Помощь</a></li>
+                <li><a className={'header-link'} href="/#news">Блог</a></li>
+                <li><a className={'header-link'} href="/#team">Наша команда</a></li>
+                <li><a className={'header-link'} href="/#projects">Проекты</a></li>
+                <li><a className={'header-link'} href="/#support" style={{color:'#808080', opacity:0.6}}>Помощь</a></li>
             </ul>
 
             <div className="searchBlock">

@@ -4,6 +4,7 @@ import MainCompanyInfo from "./MainCompanyInfo";
 import MainBlog from "./blog/MainBlog";
 import MainTeam from "./team/MainTeam";
 import Footer from "../shared/Footer";
+import MainProject from "./projects/MainProject";
 
 function MainPage() {
     return (
@@ -20,6 +21,8 @@ function MainPage() {
                 <MainBlog />
 
                 <MainTeam />
+
+                <MainProject />
 
 
             </main>

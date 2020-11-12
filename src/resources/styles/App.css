@@ -27,7 +27,7 @@
     margin-left: 5vw;
 }
 
-a {
+.header-link {
     color: white;
     text-decoration: none;
     border-bottom: solid 1px #930C96;
@@ -36,7 +36,7 @@ a {
     cursor: pointer;
 }
 
-a:hover {
+.header-link:hover {
     border-color: #930C96;
     transition: 0.3s;
 }

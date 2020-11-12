@@ -3,20 +3,20 @@ import Header from "../shared/Header";
 import Footer from "../shared/Footer";
 import axios from "axios";
 import {withRouter} from "react-router-dom";
-import TeammateCard from "./TeammateCard";
+import BigProjectCard from "./BigProjectCard";
 
-function OneTeammatePage(props) {
+function OneProjectPage(props) {
     const [data, setData] = useState(null);
-    const teammateId = props.match.params.id;
+    const newsId = props.match.params.id;
 
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`http://localhost:8080/api/v1/teammates/one`, {params: {id: teammateId}});
+            const response = await axios.get(`http://localhost:8080/api/v1/projects/one`, {params: {id: newsId}});
             onGetDataSuccess(response);
         };
         fetchData();
-    }, [teammateId]);
+    }, [newsId]);
 
     function onGetDataSuccess({data: {array_data}}) {
         setData(array_data[0]);
@@ -29,14 +29,14 @@ function OneTeammatePage(props) {
             </header>
 
             <main>
-                <div className={'shadowed-name'}> Команда > {data
-                    ? `${data.first_name} "${data.nickname}" ${data.surname}`
+                <div className={'shadowed-name'}> Проекты > {data
+                    ? data.project_name
                     : null}
                 </div>
-                <div className={'teammate-card'}>
+                <div className={'big-project-card'}>
                     {
                         data
-                            ? <TeammateCard {...data}/>
+                            ? <BigProjectCard {...data}/>
                             : null
                     }
                 </div>
@@ -50,4 +50,4 @@ function OneTeammatePage(props) {
 }
 
 
-export default withRouter(OneTeammatePage);
+export default withRouter(OneProjectPage);
