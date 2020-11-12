@@ -12,20 +12,20 @@ function SearchPagination(props) {
         <div className='landing-page-block inline'>
             <div
                 className='simple-flex'
-                style={{justifyContent: data.slice(page * 3, 3 * (page + 1)).length === 3 ? 'space-between' : 'start'}}
+                style={data ? {justifyContent: data.slice(page * 3, 3 * (page + 1)).length === 3 ? 'space-between' : 'start'} : null}
             >
                 <button
                     className='prev-btn'
                     onClick={() => setPage(Math.max(page - 1, 0))}
                 />
-                {data.slice(page * 3, 3 * (page + 1)).map((piece, idx) => card(piece, idx))}
+                {data ? data.slice(page * 3, 3 * (page + 1)).map((piece, idx) => card(piece, idx)) : "Нет результатов"}
                 <button
                     className='next-btn'
-                    onClick={() =>
+                    onClick={() => data ?
                         setPage(Math.min(
                             page + 1,
                             Math.ceil(data.length / 3) - 1)
-                        )
+                        ) : null
                     }
                 />
             </div>
