@@ -19,7 +19,7 @@ function SearchMainPage(props) {
         fetchData();
     }, [query]);
 
-    function onGetDataSuccess({data: data}) {
+    function onGetDataSuccess({data}) {
         setData(data);
     }
 
@@ -31,7 +31,7 @@ function SearchMainPage(props) {
 
             <main>
 
-                <h1>Результаты поиска:</h1>
+                <h1 className={'search-res-header'}>Результаты поиска:</h1>
 
                 <div className={'search-res-blog'}>
                     {
