@@ -15,12 +15,11 @@ function SearchMainPage(props) {
         const fetchData = async () => {
             const response = await axios.get(`http://localhost:8080/api/v1/search`, {params: {query: query}});
             onGetDataSuccess(response);
-            console.log(response);
         };
         fetchData();
     }, [query]);
 
-    function onGetDataSuccess({data: {data}}) {
+    function onGetDataSuccess({data: data}) {
         setData(data);
     }
 
@@ -37,7 +36,7 @@ function SearchMainPage(props) {
                 <div className={'search-res-blog'}>
                     {
                         data
-                        ? <SearchMainBlog props={data.search_news}/>
+                        ? <SearchMainBlog {...data.search_news}/>
                         :null
                     }
                 </div>
@@ -45,7 +44,7 @@ function SearchMainPage(props) {
                 <div className={'search-res-teammates'}>
                     {
                         data
-                            ? <SearchMainTeam props={data.search_teammates}/>
+                            ? <SearchMainTeam {...data.search_teammates}/>
                             :null
                     }
                 </div>
@@ -53,7 +52,7 @@ function SearchMainPage(props) {
                 <div className={'search-res-projects'}>
                     {
                         data
-                            ? <SearchMainProject props={data.search_projects}/>
+                            ? <SearchMainProject {...data.search_projects}/>
                             :null
                     }
                 </div>
