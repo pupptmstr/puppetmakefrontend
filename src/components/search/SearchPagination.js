@@ -3,29 +3,13 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 
 
-function Pagination(props) {
-    const {viewAllText, url, card} = props;
+function SearchPagination(props) {
 
-    const [data, setData] = useState([]);
     const [page, setPage] = useState(0);
-
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await axios.get(`http://localhost:8080/api/v1/${url}/all`);
-            onGetDataSuccess(response);
-        };
-        fetchData();
-    }, [url]);
-
-    function onGetDataSuccess({ data: { array_data } }) {
-        setData(array_data);
-    }
+    const {data, card} = props;
 
     return (
         <div className='landing-page-block inline'>
-
-
             <div
                 className='simple-flex'
                 style={{justifyContent: data.slice(page * 3, 3 * (page + 1)).length === 3 ? 'space-between' : 'start'}}
@@ -34,7 +18,7 @@ function Pagination(props) {
                     className='prev-btn'
                     onClick={() => setPage(Math.max(page - 1, 0))}
                 />
-                {data ? data.slice(page * 3, 3 * (page + 1)).map((piece, idx) => card(piece, idx)) : null}
+                {data.slice(page * 3, 3 * (page + 1)).map((piece, idx) => card(piece, idx))}
                 <button
                     className='next-btn'
                     onClick={() =>
@@ -45,16 +29,13 @@ function Pagination(props) {
                     }
                 />
             </div>
-            {/*{viewAllText ? <button className='view-all-btn'>{viewAllText}</button> : null}*/}
         </div>
     )
 }
 
-Pagination.propTypes = {
-    // viewAllText: PropTypes.string,
-    done: PropTypes.bool,
-    url: PropTypes.string.isRequired,
-    card: PropTypes.func.isRequired,
+SearchPagination.propTypes = {
+    data: PropTypes.object.isRequired,
+    card: PropTypes.func.isRequired
 };
 
-export default Pagination;
+export default SearchPagination;

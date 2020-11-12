@@ -1,8 +1,14 @@
 import React from 'react';
 import logo from './logo.png';
 import magnifier from './magnifier.png';
+import {withRouter} from "react-router-dom";
 
-function Header() {
+function Header(props) {
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            props.history.push(`/search/${event.target.value}`)
+        }
+    };
     return (
         <div className={"header"}>
 
@@ -21,11 +27,11 @@ function Header() {
 
             <div className="searchBlock">
                 <img src={magnifier} alt='search' width={17} height={17} className="magnifier"/>
-                <input name='query' type='search' className='search' placeholder="Поиск..."/>
+                <input name='query' type='search' className='search' placeholder="Поиск..." onKeyDown={handleKeyDown}/>
             </div>
 
         </div>
     )
 }
 
-export default Header
+export default withRouter(Header);
