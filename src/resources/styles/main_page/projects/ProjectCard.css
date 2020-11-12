@@ -16,18 +16,13 @@
     margin-top: -130px;
     font-weight: 700;
     font-size: 130%;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
-.project-card:hover {
-    font-size: 135%;
-    transition: 0.3s;
-}
-
-.project-card-big-button:hover {
-    border-color: #833393;
-    box-shadow: 10px 10px 20px rgba(255, 29, 232, 0.25);
-    -webkit-box-shadow: 10px 10px 20px rgba(255, 29, 232, 0.25);
-    -moz-box-shadow: 10px 10px 20px rgba(255, 29, 232, 0.25);
+.project-card:hover  .project-card-name{
+    font-size: 90%;
+    margin-top: -180px;
+    font-weight: 400;
+    transition: 0.2s;
 }
 

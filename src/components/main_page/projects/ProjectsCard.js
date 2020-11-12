@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import '../../../resources/styles/main_page/projects/ProjectCard.css'
 import {withRouter} from "react-router-dom";
@@ -6,17 +6,17 @@ import {cutString} from "../../../util";
 
 
 function ProjectCard(props) {
-
     const {id, description, genres, project_name, status, tech_specs, logo_img_link} = props;
-    let text = cutString(project_name);
-
+    const [elemText, setElemText] = useState(project_name);
     return (
-        <div className='card project-card'>
+        <div className='card project-card'
+        onMouseEnter={() => setElemText(cutString(description, 100))}
+        onMouseLeave={() => setElemText(cutString(project_name))}>
             <a onClick={() => props.history.push(`/projects/one/${id}`)} className={'project-card-big-button'}>
                 <div className={'project-card-body'}>
                     <img className={'project-card-logo'} src={logo_img_link}/>
                     <div className={'project-card-name'}>
-                        {text}
+                        {elemText}
                     </div>
                 </div>
             </a>
