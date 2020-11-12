@@ -8,7 +8,7 @@ function SearchMainBlog(props) {
         <div className='landing-page-block'>
             <h1 id={'news'}>Блог</h1>
             <SearchPagination
-                data={props}
+                data={props.array_data}
                 card={(piece, idx) => <BlogCard key={idx} {...piece} />}
             />
         </div>);

@@ -1,12 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 
 
 function SearchPagination(props) {
 
+    const {inputData, card} = props;
+    console.log(inputData);
     const [page, setPage] = useState(0);
-    const {data, card} = props;
+    const [data, setData] = useState([]);
+
+    const onGetDataSuccess = ({ data: { array_data } }) => {
+        array_data ? setData(array_data) : setData([]);
+    };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            inputData ? onGetDataSuccess(inputData) : console.log(inputData);
+        };
+        fetchData();
+    }, [inputData]);
 
     return (
         <div className='landing-page-block inline'>
@@ -34,7 +46,7 @@ function SearchPagination(props) {
 }
 
 SearchPagination.propTypes = {
-    data: PropTypes.object.isRequired,
+    inputData: PropTypes.object.isRequired,
     card: PropTypes.func.isRequired
 };
 

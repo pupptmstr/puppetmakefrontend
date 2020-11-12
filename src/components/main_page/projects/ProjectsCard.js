@@ -6,7 +6,7 @@ import {cutString} from "../../../util";
 
 
 function ProjectCard(props) {
-    const {id, description, genres, project_name, status, tech_specs, logo_img_link} = props;
+    const {id, description, project_name, logo_img_link} = props;
     const [elemText, setElemText] = useState(project_name);
     return (
         <div className='card project-card'
@@ -27,10 +27,7 @@ function ProjectCard(props) {
 ProjectCard.propTypes = {
     id: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
-    genres: PropTypes.array.isRequired,
     project_name: PropTypes.string.isRequired,
-    status: PropTypes.bool.isRequired,
-    tech_specs: PropTypes.string.isRequired,
     logo_img_link: PropTypes.string.isRequired
 };
 
