@@ -1,6 +1,7 @@
 import React from "react";
 import {cutString, getDate} from "../../util";
-import '../../resources/styles/blog/BigBlogCard.css'
+import '../../resources/styles/blog/BigBlogCard.css';
+import ReactMarkdown from 'react-markdown';
 import PropTypes from "prop-types";
 import {withRouter} from "react-router-dom";
 
@@ -22,7 +23,7 @@ function BigBlogCard(props) {
                     <h3>{header}</h3>
                 </div>
 
-                <div className={'big-blog-content'}>{content}</div>
+                <div className={'big-blog-content'}><ReactMarkdown>{content}</ReactMarkdown></div>
                 <button onClick={() => props.history.push(`/`)}>Назад</button>
 
             </div>

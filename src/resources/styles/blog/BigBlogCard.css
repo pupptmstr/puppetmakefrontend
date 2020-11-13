@@ -31,9 +31,14 @@
     text-align: center;
 }
 
+.big-blog-card-body a{
+    color: #7F06AA;
+}
+
 .big-blog-content {
     padding-left: 2vw;
-    padding-top: 1vw;
+    padding-right: 2vw;
+    padding-top: 1vh;
     min-height: 17vw;
     text-align: left;
 }

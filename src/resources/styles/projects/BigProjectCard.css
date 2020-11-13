@@ -51,13 +51,13 @@
     margin-top: 2vh;
     padding-left: 3vw;
     font-weight: 200;
-    height: 11vh;
+    max-height: 11vh;
 }
 
 .big-project-tech-specs {
     margin-top: 2vh;
     padding-left: 3vw;
-    height: 11vh;
+    max-height: 11vh;
     scrollbar-track-color: #7C3693;
     scrollbar-arrow-color: transparent;
     scrollbar-base-color: #7C3693;
