@@ -22,7 +22,7 @@ function BigBlogCard(props) {
                     <h3>{header}</h3>
                 </div>
 
-                <div className={'big-blog-content'}>{cutString(content, 110)}</div>
+                <div className={'big-blog-content'}>{content}</div>
                 <button onClick={() => props.history.push(`/`)}>Назад</button>
 
             </div>
