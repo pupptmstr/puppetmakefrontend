@@ -2,9 +2,12 @@ import React, {useState} from "react";
 import '../../resources/styles/teammates/TeammateCard.css'
 import PropTypes from "prop-types";
 import {withRouter} from "react-router-dom";
+import 'react-medium-image-zoom/dist/styles.css'
+
 
 function TeammateCard(props) {
     const date = new Date();
+    const [isZoomed, setZoomed] = useState(false);
     const [page, setPage] = useState(0);
     const {
         first_name,
@@ -18,8 +21,6 @@ function TeammateCard(props) {
         social_links,
         photos
     } = props;
-    console.log(props);
-
 
     return (
         <div className='big-teammate-card'>
@@ -27,7 +28,7 @@ function TeammateCard(props) {
             <div className='big-teammate-card-body'>
                 <div className='inline-teammate-info'>
                     <div className='full-name'>
-                        <h2>{`${first_name} "${nickname}" ${surname}`}</h2>
+                        <h2>{`${first_name} ${nickname} ${surname}`}</h2>
                     </div>
                     <div className='role'>{`${global_role}`}</div>
                     <div className={'years-in-company'}>
@@ -47,14 +48,17 @@ function TeammateCard(props) {
                 </div>
 
                 <div className='simple-flex'
-                     style={{justifyContent: (photos ? photos.slice(page * 3, 3 * (page + 1)).length : 0    ) === 3 ? 'space-between' : 'start'}}
+                     style={{justifyContent: (photos ? photos.slice(page * 3, 3 * (page + 1)).length : 0) === 3 ? 'space-between' : 'start'}}
                 >
                     <button
                         className='prev-btn-photos'
                         onClick={() => setPage(Math.max(page - 1, 0))}
                     />
-                    {photos.slice(page * 3, 3 * (page + 1)).map(photo => <img className={'one-photo'} src={`${photo}`}
-                                                                              alt={`${photo}`}/>)}
+                    {photos.slice(page * 3, 3 * (page + 1)).map((photo, key) =>
+                            <a href={photo} target={'_blank'}><img className={'one-photo'} src={photo} alt={photo} id={key}/></a>
+
+                    )}
+
                     <button
                         className='next-btn-photos'
                         onClick={() =>

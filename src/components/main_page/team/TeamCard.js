@@ -8,7 +8,7 @@ import {withRouter} from "react-router-dom";
 function TeamCard(props) {
 
     const {id, first_name, global_role, description, main_photo_link, nickname, surname} = props;
-    const nicknameWSpace = nickname ? `"${nickname}" ` : '';
+    // const nicknameWSpace = nickname==='\s' ? `"${nickname}" ` : '';
 
     return (
         <div className='card team-card'>
@@ -16,7 +16,7 @@ function TeamCard(props) {
                 <img src={main_photo_link} alt='avatar'/>
             </div>
             <div className='team-card-body'>
-                <h2>{first_name} {nicknameWSpace}{surname}</h2>
+                <h2>{first_name} {nickname} {surname}</h2>
                 <h3>{global_role}</h3>
                 <div>{cutString(description, 120)}</div>
             </div>

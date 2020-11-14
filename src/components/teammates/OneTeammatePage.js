@@ -30,7 +30,7 @@ function OneTeammatePage(props) {
 
             <main>
                 <div className={'shadowed-name'}> Команда > {data
-                    ? `${data.first_name} "${data.nickname}" ${data.surname}`
+                    ? `${data.first_name} ${data.nickname} ${data.surname}`
                     : null}
                 </div>
                 <div className={'teammate-card'}>

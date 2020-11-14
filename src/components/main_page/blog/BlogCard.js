@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import '../../../resources/styles/main_page/blog/BlogCard.css'
 import {cutString, getDate} from '../../../util';
 import {withRouter} from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 
 
 function BlogCard(props) {
@@ -15,7 +16,7 @@ function BlogCard(props) {
             <div className='blog-card-body'>
                 <span>{getDate(create_at.Day, create_at.Month, create_at.Year)}</span>
                 <h2>{header}</h2>
-                <div>{cutString(content, 110)}</div>
+                <div><ReactMarkdown>{cutString(content, 110)}</ReactMarkdown></div>
                 <button onClick={() => props.history.push(`/news/one/${id}`)}>Подробнее</button>
 
             </div>
